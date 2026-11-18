@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1220">
+  <title>DEVICE X PRO — Device Explorer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">X</span><span>DEVICE <b>X</b><small>PRO DEVICE EXPLORER</small></span></a>
+    <nav><a href="#explore">Explore</a><a href="#about">About</a></nav>
+    <button class="lang-btn" id="langBtn" type="button">العربية</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow"><span class="pulse"></span> SMART DEVICE DATABASE</div>
+      <h1>Find your next<br><span>device.</span></h1>
+      <p class="hero-copy">Explore smartphones and laptops. Search by model, brand, processor, RAM, or storage.</p>
+      <a class="primary-link" href="#explore">Explore devices <span>↓</span></a>
+      <div class="hero-stats">
+        <div><strong id="deviceCount">0</strong><small>DEVICES LOADED</small></div>
+        <div><strong>PC + MOBILE</strong><small>RESPONSIVE DESIGN</small></div>
+        <div><strong>FREE</strong><small>OPEN ACCESS</small></div>
+      </div>
+    </section>
+
+    <section class="explorer" id="explore">
+      <div class="section-heading">
+        <div><div class="eyebrow">DEVICE CATALOG</div><h2>Explore the database</h2></div>
+        <div class="load-state" id="loadState"><span class="spinner"></span> Loading database…</div>
+      </div>
+      <div class="search-panel">
+        <label class="searchbox"><span class="search-icon">⌕</span><input id="searchInput" type="search" autocomplete="off" placeholder="Search iPhone, Samsung, HP, Intel Core…" aria-label="Search devices"><button id="clearBtn" type="button" aria-label="Clear search">×</button></label>
+        <div class="filters">
+          <select id="typeFilter" aria-label="Device type"><option value="all">All devices</option><option value="phone">Smartphones</option><option value="laptop">Laptops</option></select>
+          <select id="brandFilter" aria-label="Brand"><option value="all">All brands</option></select>
+          <select id="sortFilter" aria-label="Sort"><option value="name">Sort: Name</option><option value="brand">Sort: Brand</option></select>
+        </div>
+      </div>
+      <div class="results-line"><span id="resultsText">Preparing devices…</span><span id="sourceText">Data loads from public datasets</span></div>
+      <div class="device-grid" id="deviceGrid">
+        <div class="empty-state"><div class="empty-icon">⌕</div><h3>Preparing your catalog</h3><p>The search field is ready. Device records will appear as the database loads.</p></div>
+      </div>
+      <button class="more-btn" id="moreBtn" type="button" hidden>Load more devices</button>
+    </section>
+
+    <section class="about" id="about">
+      <div><div class="eyebrow">ABOUT DEVICE X</div><h2>Technology,<br><span>made easier.</span></h2></div>
+      <p>DEVICE X PRO is a device discovery project created to make technical specifications easier to explore. Information may vary by region and configuration, so always confirm important details with the manufacturer before purchasing.</p>
+    </section>
+  </main>
+
+  <footer><span>DEVICE X PRO</span><span>CREATED BY OTHMAN LAMMALLAH</span><span>© 2026</span></footer>
+
+  <dialog id="detailDialog">
+    <button class="dialog-close" id="dialogClose" type="button" aria-label="Close">×</button>
+    <div id="detailContent"></div>
+  </dialog>
+  <script src="app.js"></script>
+</body>
+</html>
